@@ -7,7 +7,6 @@ function takeANumber(katzDeli, name) {
   return(`Welcome, ${name}. You are number ${katzDeli.length} in line.`);
 }
 
-function takeANumber(katzDeliLine, nowServing) {
 
 function nowServing(katzDeli) {
   let i = 0;
@@ -29,21 +28,31 @@ function nowServing(katzDeli) {
 
 var line = [];
 
-
-
-
-
 function currentLine(katzDeli) {
-  let i = 0;
-  while (i < katzDeli.length) {
+  for (let i = 0; i < katzDeli.length; i++) {
     line.push(` `+[i+1]+`. `  + katzDeli[i])
-    i++;
   }
   if (katzDeli.length === 0) {
     return "The line is currently empty.";
   } else
   return(`The line is currently:` + line);
 }
+
+
+/// did it this way first, then refactored to above
+//(i used a for loop instead of a while loop)
+
+// function currentLine(katzDeli) {
+//   let i = 0;
+//   while (i < katzDeli.length) {
+//     line.push(` `+[i+1]+`. `  + katzDeli[i])
+//     i++;
+//   }
+//   if (katzDeli.length === 0) {
+//     return "The line is currently empty.";
+//   } else
+//   return(`The line is currently:` + line);
+// }
 
 //WORKS:::::
 
